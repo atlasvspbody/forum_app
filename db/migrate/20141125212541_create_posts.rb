@@ -1,10 +1,6 @@
 class CreatePosts < ActiveRecord::Migration
   def change
-    create_table :posts do |t|
-      t.string :tittle
-      t.string :content
-
-      t.timestamps null: false
+      add_column(:posts, :created_at, :datetime)
+      add_column(:posts, :updated_at, :datetime)
     end
-  end
 end
