@@ -2,6 +2,6 @@
 <% @posts_prev.each do |post| %>
       <br>
         <h1><%= post.tittle %></h1>
-        <h4><%= post.content %></h4>
+        <h4><%= truncate(post.content, length: 17)  %></h4>
       </br>
 <% end %>
