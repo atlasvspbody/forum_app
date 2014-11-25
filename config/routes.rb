@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-
+  get 'adminpost' => 'static_pages#adminpost'
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
