@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'adminpost' => 'static_pages#adminpost'
   resources :posts
+  get   'forum_posts/:id' , :controller => "posts", :action => "forum_posts", :as => 'forum_posts'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

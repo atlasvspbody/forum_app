@@ -12,6 +12,12 @@ class PostsController < ApplicationController
   def show
   end
 
+  def forum_posts
+    @post = Post.find([params[:id]]).first()
+    @next = @post.next.id unless @post.next.blank?
+    @prev = @post.previous.id unless @post.previous.blank?
+  end
+
   # GET /posts/new
   def new
     @post = Post.new

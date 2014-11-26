@@ -1,0 +1,8 @@
+
+        <h1><%= @post.tittle %></h1>
+        <h4><%= @post.content  %></h4>
+        <h1>
+        	<%= link_to "<---",    forum_posts_path(@prev) unless @prev.blank? %>
+        	<%= link_to "--->",    forum_posts_path(@next) unless @next.blank? %>
+        </h1>
+        

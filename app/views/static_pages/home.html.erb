@@ -1,7 +1,10 @@
 <h1>Forum of ruby on rails</h1>
 <% @posts_prev.each do |post| %>
-      <br>
-        <h1><%= post.tittle %></h1>
-        <h4><%= truncate(post.content, length: 17)  %></h4>
-      </br>
+	<br>
+	<%= link_to(forum_posts_path(post.id), :class =>"test") do %>
+		<div>
+	        <h1><%= post.tittle %></h1>
+	        <h4><%= truncate(post.content, length: 17)  %></h4>
+		</div>
+	<% end %>
 <% end %>
